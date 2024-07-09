@@ -3,7 +3,7 @@
 Plugin Name: Período Eleitoral
 Description: Plugin para gerenciar exibição de conteúdo durante o período eleitoral.
 Version: 1.0
-Author: Devos - Tecnologias
+Author: Lucas Reis
 */
 
 // Adiciona uma opção na página de configurações do WordPress
