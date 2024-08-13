@@ -6,7 +6,6 @@ Version: 1.0
 Author: Lucas Reis
 */
 
-// Adiciona uma opção na página de configurações do WordPress
 function pe_adicionar_opcao_periodo_eleitoral() {
     add_options_page(
         'Configurações de Período Eleitoral', 
@@ -18,7 +17,6 @@ function pe_adicionar_opcao_periodo_eleitoral() {
 }
 add_action('admin_menu', 'pe_adicionar_opcao_periodo_eleitoral');
 
-// Exibe a página de configurações do plugin
 function pe_configuracao_periodo_eleitoral() {
     ?>
     <div class="wrap">
@@ -44,13 +42,11 @@ function pe_configuracao_periodo_eleitoral() {
     <?php
 }
 
-// Registra a configuração do plugin
 function pe_registrar_opcoes() {
     register_setting('pe_opcoes_grupo', 'pe_periodo_eleitoral');
 }
 add_action('admin_init', 'pe_registrar_opcoes');
 
-// Adiciona o script de estilo personalizado ao front-end
 function pe_ocultar_elementos_peleit() {
     if (get_option('pe_periodo_eleitoral') == 1) {
         echo '<style>.PEleit, #PEleit { display: none !important; }</style>';
